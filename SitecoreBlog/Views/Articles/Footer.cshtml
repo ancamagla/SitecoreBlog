@@ -1,0 +1,9 @@
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+  
+@{
+var item = Sitecore.Context.Database.GetItem("{C71E7BF1-F998-482C-BA93-B30E86707A2D}"); 
+} 
+   <div style="color:white">
+           @Html.Sitecore().Field("FooterDescription", item)
+   </div>

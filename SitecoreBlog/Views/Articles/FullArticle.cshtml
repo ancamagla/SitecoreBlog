@@ -1,0 +1,26 @@
+﻿
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+
+@{
+    var item = Sitecore.Context.Database.GetItem("{9E1278DF-C10E-4251-953F-648A0CC7B390}");
+}
+<div>
+    <center>
+        <div >
+            @Html.Sitecore().Field("ArticleImage", item, new { w = 1111, h = 650 })
+            <div style="background-color: white; width: 63%;">
+                <p style="color:forestgreen;text-align:left">
+                    @Html.Sitecore().Field("ArticleType", item)
+                </p>
+                <p style="text-align:left;">
+                    @Html.Sitecore().Field("ArticleDate", item)
+                </p>
+                <p style="text-align: left; font-size: large">
+                    @Html.Sitecore().Field("Title", item)
+                </p>
+                <p>@Html.Sitecore().Field("LongDescription", item)</p>
+            </div>
+        </div>
+    </center>
+</div>

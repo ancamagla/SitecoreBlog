@@ -1,0 +1,21 @@
+
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+
+@{
+    var item = Sitecore.Context.Database.GetItem("{C71E7BF1-F998-482C-BA93-B30E86707A2D}");
+}
+<div>
+    <center>
+        <div style="background-color: #2780E3; width: 70%; height: 170px; ">
+          <br />
+            <div style="color: white; font-size: xx-large; text-align: left;margin-top:30px;">
+                @Html.Sitecore().Field("HeaderDescription", item)
+            </div>
+            <p style=" color: white; font-size: small; text-align: left; margin-top: 3px;">
+                @Html.Sitecore().Field("HeaderSmallDescription", item)
+            </p>
+
+        </div>
+    </center>
+</div>
